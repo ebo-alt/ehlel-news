@@ -1,6 +1,7 @@
-import ArticleSection from '../../components/ArticleSection';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import ArticleSection from '../../components/ArticleSection';
+
 const img =
   'https://s3-alpha-sig.figma.com/img/efe6/e221/10ece248323aa818f9ef25014aa5cccf?Expires=1684713600&Signature=NqMARpmnyshP19R04d9y5P~HxbhAxbs6xCCAgifPMmLTFnX6B8K~Zumdcia0wMtqcmPuTeMTf60UDVaKcsqMq2PTVVTpgSW9ROVDzTpsucQiLEPE01-8Wxn0g81~aRJQLa3jIoLRVMVhBwj0kkdJvniW~R8YE5FT5tfN-oPdb~LEWOJp0G9RHXfnMaTPqS8Z6IwLIBXLLpNe5AeMeBI6NhtTQY2cDTY6MMjipqNguBSfejPjzym3SH73mmrJKk7QVQsuY84CNwwrSXWwEXo0mqFGaX4g~ve262NiWrQHuRdHzekzEF7DKZ~jxs4qngGpwMuZgCDcXROC1ESLlGSP0w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4';
 function ArticleDetailPage() {
@@ -9,7 +10,7 @@ function ArticleDetailPage() {
       <section className="absolute top-0 z-10 w-full">
         <Header />
       </section>
-      <ArcticleSection image={img} className="screen-80" />
+      <ArticleSection image={img} className="screen-80" />
       <section className="mx-20 my-5">
         <p>
           Seamlessly syndicate cutting-edge architectures rather than
