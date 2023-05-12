@@ -49,4 +49,8 @@ th {
   .screen-60 {
     height: 60vh;
   }
+
+  .screen-90 {
+    height: 90vh;
+  }
 }

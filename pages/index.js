@@ -1,3 +1,5 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 import ArticleCard from '../components/ArticleCard';
 import ArticleImageCard from '../components/ArticleImageCard';
 import Header from '../components/Header';
@@ -40,9 +42,18 @@ function Home() {
         <Header />
       </section>
       <section className="relative">
-        {newBanners.map((banner) => (
-          <BannerCard image={bgImgPath} />
-        ))}
+        <Swiper
+          slidesPerView={1}
+        >
+          {newBanners.map((banner) => (
+            <SwiperSlide>
+              <BannerCard
+                image={banner.image}
+                title={banner.title}
+                description={banner.description} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
       <section className="mx-10 mt-10">
         <h1 className="text-2xl">Шинэ мэдээ</h1>
