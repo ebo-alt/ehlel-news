@@ -4,10 +4,11 @@ import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import styles from './article.module.css';
 import Layout from '../../../components/Layout';
-import RichTextEditor from '../../../components/RichTextEditor';
+import dynamic from 'next/dynamic';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 function ArticleCreate() {
+  const Editor = dynamic(() => import("../../../components/RichTextEditor"), { ssr: false });
   const router = useRouter();
   const [data, setData] = useState({
     tag: 'Улс төр',
@@ -61,7 +62,7 @@ function ArticleCreate() {
           </section>
           <section className="flex flex-col w-full mt-5">
             <p>Контент</p>
-            <RichTextEditor onChange={richData => {
+            <Editor onChange={richData => {
               setData({
                 ...data,
                 'content': richData,
