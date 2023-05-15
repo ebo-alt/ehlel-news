@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 import styles from './article.module.css';
 import Layout from '../../../components/Layout';
+import RichTextEditor from '../../../components/RichTextEditor';
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 function ArticleCreate() {
@@ -29,9 +30,8 @@ function ArticleCreate() {
         pauseOnHover: false,
         progress: undefined,
       });
-      router.push('/articles');
+      router.push('/admin/articles');
     });
-    console.log('data', data);
   }
 
   return (
@@ -58,6 +58,15 @@ function ArticleCreate() {
               onChange={onChange}
               className={`${styles.create__input_text} border border-[#CBD5E1] w-2/3 outline-none px-3 py-1 rounded`}
             />
+          </section>
+          <section className="flex flex-col w-full mt-5">
+            <p>Контент</p>
+            <RichTextEditor onChange={richData => {
+              setData({
+                ...data,
+                'content': richData,
+              });
+            }} />
           </section>
           <section className="flex flex-row items-center justify-between w-full mt-5">
             <p>Таг</p>
