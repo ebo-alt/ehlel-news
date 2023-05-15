@@ -1,4 +1,53 @@
-.header__container {
+.container {
+  width: 100%;
   background: rgba(0, 0, 0, 0.2);
-  @apply flex w-full justify-between px-[60px] py-[16px];
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 5px;
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  position: absolute;
+  top: 0;
+}
+.list {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.list > li {
+  list-style-type: none;
+  margin-left: 40px;
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.list > li::before {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.listActive {
+  font-weight: 700;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  z-index: unset;
+  margin-top: 20px;
+}
+.zurg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Zuraas {
+  height: 20px;
+  width: 2px;
+  background-color: #e5e5e5;
+  margin-left: 10px;
+  margin-right: 10px;
 }
